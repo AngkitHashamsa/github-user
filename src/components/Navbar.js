@@ -1,19 +1,29 @@
 import React from 'react'
 import styled from 'styled-components'
 import { useAuth0 } from '@auth0/auth0-react'
-import { useGlobalContext } from '../context/context'
+
 const Navbar = () => {
   const { isAuthenticated, loginWithRedirect, logout, user, isLoading } =
     useAuth0()
   // console.log(isAuthenticated, user, isLoading)
+  // console.log(user)
+  const isUser = isAuthenticated && user
 
   return (
     <Wrapper>
-      {isAuthenticated && user.name}
-      <button onClick={loginWithRedirect}>log in</button>
-      <button onClick={() => logout({ returnTo: window.location.origin })}>
-        log out
-      </button>
+      {isUser && user.picture && <img src={user.picture} alt={user.name}></img>}
+      {isUser && user.name && (
+        <h4>
+          welcome, <strong>{user.name}</strong>
+        </h4>
+      )}
+      {isUser ? (
+        <button onClick={() => logout({ returnTo: window.location.origin })}>
+          logout
+        </button>
+      ) : (
+        <button onClick={loginWithRedirect}>log in</button>
+      )}
     </Wrapper>
   )
 }

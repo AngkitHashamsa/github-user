@@ -1,3 +1,7 @@
+## live site on netlify
+
+- [github search](https://react-app-github-user.netlify.app)
+
 ## Starter Project
 
 - css (global styles, styled components)
