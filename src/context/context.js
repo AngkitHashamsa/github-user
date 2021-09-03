@@ -1,7 +1,7 @@
 import React, { useState, useEffect, useContext } from 'react'
-import mockUser from './mockData.js/mockUser'
-import mockRepos from './mockData.js/mockRepos'
-import mockFollowers from './mockData.js/mockFollowers'
+import mockUser from './mockData.js/mockUsers.json'
+import mockRepos from './mockData.js/mockRepos.json'
+import mockFollowers from './mockData.js/mockFollowers.json'
 import axios from 'axios'
 
 const rootUrl = 'https://api.github.com'
