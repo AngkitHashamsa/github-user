@@ -5,7 +5,7 @@ import { useGlobalContext } from '../context/context'
 const Navbar = () => {
   const { isAuthenticated, loginWithRedirect, logout, user, isLoading } =
     useAuth0()
-  console.log(isAuthenticated, user, isLoading)
+  // console.log(isAuthenticated, user, isLoading)
 
   return (
     <Wrapper>
