@@ -5,8 +5,6 @@ import App from './App'
 import * as serviceWorker from './serviceWorker'
 import { GithubProvider } from './context/context'
 import { Auth0Provider } from '@auth0/auth0-react'
-// dev-7sv6hk3f.us.auth0.com
-// mdg1l0G6yXhD36gPUdpowG1RxXw67EAp
 
 ReactDOM.render(
   <React.StrictMode>
